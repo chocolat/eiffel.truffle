@@ -1,0 +1,8 @@
+(name retry)
+
+(trigger
+    (tab in))
+
+(only-in source.eiffel)
+
+(snippet retry)

@@ -1,0 +1,84 @@
+(root source.eiffel
+    (zone comment.line.double-dash.eiffel
+        (match
+            (regex [(--).*$\n?]
+                (1 punctuation.definition.comment.eiffel))))
+    (zone keyword.control.eiffel
+        (match
+            (list Indexing indexing deferred expanded class inherit rename as export undefine redefine select all create creation feature prefix infix separate frozen obsolete local is unique do once external alias require ensure invariant variant rescue retry like check if else elseif then inspect when from loop until debug not or and xor implies old end)
+            (boundary.both)))
+    (zone variable.other.eiffel
+        (match
+            (regex [[a-zA-Z_]+])))
+    (zone constant.language.eiffel
+        (match
+            (list True true False false Void void Result result)
+            (boundary.both)))
+    (zone meta.features.eiffel
+        (start feature)
+        (end end))
+    (zone meta.effective_routine_body.eiffel
+        (start
+            (list do once))
+        (end
+            (list ensure end)))
+    (zone meta.rescue.eiffel
+        (start rescue)
+        (end end))
+    (zone string.quoted.double.eiffel
+        (start
+            (regex "
+                (0 punctuation.definition.string.begin.eiffel)))
+        (end
+            (regex "
+                (0 punctuation.definition.string.end.eiffel)))
+        (subzones
+            (zone constant.character.escape.eiffel
+                (match
+                    (regex \\.)))))
+    (zone constant.numeric.eiffel
+        (match
+            (regex [[0-9]+])))
+    (zone storage.modifier.eiffel
+        (match
+            (list deferred expanded)
+            (boundary.both)))
+    (zone meta.definition.class.eiffel
+        (start
+            (regex [^\s*
+					((?:\b(deferred|expanded)\b\s*)*) # modifier
+					(class)\s+
+					(\w+)\s* # identifier]
+                (1 storage.modifier.eiffel)))
+        (end
+            (regex [(?=end)]
+                (1 storage.modifier.eiffel)))
+        (subzones
+            (zone meta.definition.class.extends.java
+                (start
+                    (regex [\b(extends)\b\s+]
+                        (1 storage.modifier.java)))
+                (end
+                    (regex [(?={|implements)]
+                        (1 storage.modifier.java)))
+                (subzones
+                    (include @all-types)))
+            (zone meta.definition.class.implements.java
+                (start
+                    (regex [\b(implements)\b\s+]
+                        (1 storage.modifier.java)))
+                (end
+                    (regex [(?={|extends)]
+                        (1 storage.modifier.java)))
+                (subzones
+                    (include @all-types))))))
+
+(collection number
+    (zone
+        (match
+            (regex [[0-9]+]))))
+
+(collection variable
+    (zone
+        (match
+            (regex [[a-zA-Z0-9_]+]))))

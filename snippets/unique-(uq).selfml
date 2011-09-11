@@ -1,0 +1,8 @@
+(name unique)
+
+(trigger
+    (tab fd))
+
+(only-in source.eiffel)
+
+(snippet [%{1="constant"}: %{2="TYPE"} is unique])

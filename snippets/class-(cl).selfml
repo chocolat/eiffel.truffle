@@ -1,0 +1,21 @@
+(name class)
+
+(trigger
+    (tab cl))
+
+(only-in source.eiffel)
+
+(snippet [-- %{1="class_name"}
+
+class
+	%{1/(.*)/\U$0\E/}
+inherit
+
+create
+
+feature
+
+invariant
+
+end -- %{1/(.*)/\U$0\E/}
+])

@@ -1,0 +1,9 @@
+(name when)
+
+(trigger
+    (tab in))
+
+(only-in source.eiffel)
+
+(snippet [when %{1="choice"} then
+	%{2="instruction"}])

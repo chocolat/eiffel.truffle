@@ -1,0 +1,14 @@
+(name inspect)
+
+(trigger
+    (tab in))
+
+(only-in source.eiffel)
+
+(snippet [inspect
+	%{1="expression"}
+when %{2="choice"} then
+	%{3="instruction"}%{4="
+else
+	%{5="instruction"}"}
+end])

@@ -1,0 +1,19 @@
+(name routine)
+
+(trigger
+    (tab fd))
+
+(only-in source.eiffel)
+
+(snippet [%{1="routine"}%{2=" (%{3="args"}: %{4="TYPE"})"}%{5=": %{6="TYPE"}"} is%{7="
+	require
+		%{8="assertion"}"}%{9="
+	local
+		%{10="l"}:%{11="TYPE"}"} 
+	do
+		%{12="instruction"}{13:
+	ensure
+		%{14="assertion"}}%{15="
+	rescue
+		%{16="instruction"}"}
+	end -- %{1}])

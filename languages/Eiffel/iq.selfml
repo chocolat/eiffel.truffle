@@ -1,0 +1,30 @@
+(detector
+    (extension e))
+
+(folding
+    (start [(class|once|do|external)])
+    (stop [(ensure|end)]))
+
+(shell-variables
+    (TM_COMMENT_START [-- ]))
+
+(comment.line [-- ])
+
+(indentation.decrease [^\s*(index|class|inherit|end|else|elseif|when|require|ensure|invariant|rescue|export|undefine|redefine|select|variant|until|loop)])
+
+(indentation.increase [^\s*(index|class|inherit|do|if\s.*\sthen|else|elseif\s.*\sthen|inspect|when\s.*\sthen|require|ensure|invariant|rescue|check|debug|rename|export|undefine|redefine|select|local|from|variant|until|loop)\s*$])
+
+(pair [(]
+    [)]
+    (smart-typing)
+    (highlight))
+
+(pair "
+    "
+    (smart-typing)
+    (highlight))
+
+(pair <
+    >
+    (smart-typing)
+    (highlight))

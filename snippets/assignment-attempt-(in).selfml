@@ -1,0 +1,8 @@
+(name [assignment attempt])
+
+(trigger
+    (tab in))
+
+(only-in source.eiffel)
+
+(snippet [%{1="writable"} ?= %{2="expression"}])

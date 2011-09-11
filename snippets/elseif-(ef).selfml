@@ -1,0 +1,10 @@
+(name elseif)
+
+(trigger
+    (tab in))
+
+(only-in source.eiffel)
+
+(snippet [elseif %{1="boolean_expression"} then
+	%{2="instruction"}
+])

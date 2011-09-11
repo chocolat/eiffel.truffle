@@ -1,0 +1,17 @@
+(name [external routine])
+
+(trigger
+    (tab fd))
+
+(only-in source.eiffel)
+
+(snippet [%{1="routine"}%{2=" (%{3="args"}: %{4="TYPE"})"}%{5=": %{6="TYPE"}"} is%{7="
+	require
+		%{8="assertion"}"}
+	external
+		"%{9="language"}"%{10="
+	alias
+		"%{11="external_name"}""}%{12="
+	ensure
+		%{13="assertion"}"}
+	end -- %{1}])

@@ -1,0 +1,10 @@
+(name check)
+
+(trigger
+    (tab in))
+
+(only-in source.eiffel)
+
+(snippet [check
+	%{1="assertion"}
+end])

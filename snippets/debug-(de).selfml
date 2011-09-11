@@ -1,0 +1,10 @@
+(name debug)
+
+(trigger
+    (tab in))
+
+(only-in source.eiffel)
+
+(snippet [debug%{1=" (%{2="debug_key"})$"}
+	%{3="instruction"}
+end])

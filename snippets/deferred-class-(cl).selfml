@@ -1,0 +1,19 @@
+(name [deferred class])
+
+(trigger
+    (tab cl))
+
+(only-in source.eiffel)
+
+(snippet [-- %{1="class_name"}
+
+deferred class
+	%{1/(.*)/\U$0\E/}
+inherit
+
+feature
+
+invariant
+
+end -- %{1/(.*)/\U$0\E/}
+])

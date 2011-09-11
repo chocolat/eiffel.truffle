@@ -1,0 +1,17 @@
+(name indexing)
+
+(trigger
+    (tab ix))
+
+(only-in source.eiffel)
+
+(snippet [Indexing
+	Project: "%{TM_FILEPATH}"
+	File: "%{TM_FILENAME}"
+	Description: "%{1="description"}"
+	Author: "%{2="%{USER}"}"
+	Copyright: "� 2006 %{3="%{TM_ORGANIZATION_NAME}"}"
+	Version: 1.0
+	Date: "`date`"
+	Keywords: %{4="keywords"}
+])

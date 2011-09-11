@@ -1,0 +1,19 @@
+(name loop)
+
+(trigger
+    (tab in))
+
+(only-in source.eiffel)
+
+(snippet [from
+	%{1="instruction"}%{2="
+invariant
+	%{3="assertion"}"}%{4="
+variant
+	%{5="expression"}"}
+until
+	%{6="boolean_expression"}
+loop
+	%{7="instruction"}
+end
+])
